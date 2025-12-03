@@ -90,15 +90,16 @@ performance compared to LinUCB \cite{chu2011contextual}.
 Multi-armed bandit algorithms balance exploration and exploitation in
 decision-making. The Upper Confidence Bound (UCB) algorithm is a widely used
 approach due to its simplicity and theoretical guarantees. However, existing
-adaptations of UCB to machine learning contexts, such as LinUCB and NeuralUCB,
-are tailored to specific scenarios and lack a general framework.
+adaptations of UCB to machine learning contexts, such as LinUCB
+\cite{chu2011contextual} and NeuralUCB \cite{zhou2020neural}, are tailored to
+specific scenarios and lack a general framework.
 
 We propose ML-UCB, a generalized UCB algorithm that integrates arbitrary machine
 learning models. By leveraging the model's learning curve, ML-UCB achieves
 faster regret convergence under specific conditions. Our contributions include:
 1. A hybrid algorithm combining UCB with machine learning models.
 2. A rigorous proof of sublinear regret for ML-UCB.
-3. Experimental validation on the MovieLens dataset, demonstrating its
+3. Experimental validation on the simulated dataset, demonstrating its
 effectiveness.
 
 \section{Algorithm}
@@ -133,44 +134,88 @@ and datasets. For instance, in recommendation systems, collaborative filtering
 models can be used to predict user preferences, while in clinical trials,
 survival analysis models can estimate treatment effects.
 
-\section{Concentration Inequality and Classical UCB}
+\section{Concentration Inequality and UCB}
 
-\begin{definition}[Estimator]
-An estimator $E$ maps $n$ observations to a real value: $E_n: \mathbb{R}^n \to
-\mathbb{R}$.
-\end{definition}
+The UCB algorithm is grounded in concentration inequalities, such as Hoeffding's
+inequality, which quantify the convergence rate of the sample mean to the true
+mean. Recall that for independent sub-Gaussian random variables $X_1, \dots, X_n$
+with mean $\mu$ and parameter $\sigma^2$, Hoeffding's inequality states that:
+\begin{equation}
+P\left( \left|\frac{1}{n}\sum_{i=1}^n X_i -\mu \right| \geq t \right) \leq
+\exp\left(-\frac{n t^2}{2 \sigma^2}\right)
+\end{equation}
 
-The classical UCB algorithm estimates rewards as:
-$$ \ucb_{j, t} = \hat{\mu}_{j, t-1} + \sqrt{6 \log{t}} \cdot
-\hat{\sigma}_{\hat{\mu}_{j, t-1}}, $$
-where $\hat{\mu}_{j, t-1}$ is the sample mean, and $\hat{\sigma}_{\hat{\mu}_{j,
-t-1}}$ is the standard error. The arm with the highest UCB is selected at each
-step.
+Consider a multi-armed bandit problem with $K$ arms. At each time step $t$,
+selecting arm $j$ yields a reward $X_{j, t}$ drawn from an unknown distribution
+$P_{\theta_j}$ with mean $\mu_j = \mathbb{E}[X_{j, 1}]$. The classical UCB
+strategy estimates $\mu_j$ using the sample mean $\hat{\mu}_{j, t-1}$ and adds
+an exploration bonus. The UCB score is given by:
+\begin{equation}  \label{eq:classical_ucb}
+\ucb_{j, t}= \hat{\mu}_{j, t-1} + \sqrt{\frac{6 \log{t}} {T_j (t -1)}} \cdot
+\hat{\sigma}_{j, t-1}
+\end{equation}
+where $T_j(t)$ is the number of times arm $j$ has been played up to time $t$.
+The algorithm selects the arm with the highest score:
+\begin{equation}
+I_t = \arg\max_{1\leq j \leq K} \ucb_{j, t}.
+\end{equation}
+The objective is to minimize the pseudo-regret:
+$$ R_n = n \max_{1\leq j \leq K} \mu_j - \sum_{t=1}^n \mathbb{E} X_{I_t}. $$
 
-The pseudo-regret is defined as:
-$$ R_n = n \max_j \mu_j - \sum_{t=1}^n \mathbb{E}[X_{I_t}], $$
-where $I_t$ is the selected arm at time $t$. This framework can be generalized
-to ML-based estimators.
+Observing that the standard error of the sample mean estimator is
+$\hat{\sigma}_{\hat{\mu}_{j, t-1}} = \hat{\sigma}_{j, t-1} / \sqrt{T_j(t-1)}$,
+we can rewrite Equation (\ref{eq:classical_ucb}) as:
+\begin{equation}
+\ucb_{j, t}= \hat{\mu}_{j, t-1} + \sqrt{6 \log t} \cdot
+\hat{\sigma}_{\hat{\mu}_{j, t-1}}
+\end{equation}
+This formulation highlights the dependence on the estimator's variance. In this
+work, we generalize this approach by replacing the sample mean with arbitrary
+model-based estimators denoted by $\hat{E}$, leading to a general UCB formula:
+\begin{equation}
+\ucb_{j, t}= \hat{E}_{j, t-1} + \sqrt{6 (\log t)^{\frac{1}{s}}} \cdot
+\hat{\sigma}_{\hat{E}_{j, t-1}}
+\end{equation}
+where $s$ represents the convergence rate of the model. The formula was derived 
+from a generalization of the $\psi$-UCB framework, which we discuss next.
 
-\section{Generalized $\psi$-UCB}
+\section{Cumulant Generating Function and $\psi$-UCB}
 
-We extend UCB to any model-based estimator. Let $\hat{E}_{j, k}$ be the reward
-estimator for arm $j$ based on $k$ samples. Assuming $\hat{E}_{j, k}$ is
-unbiased and satisfies $O(n^s)$-$\psi$ growth, we define:
+In this section, let's recall the $\psi$-UCB framework using Cumulant Generating 
+Functions (CGF). The CGF of a random variable $X$ is defined
+as $\psi_X(\lambda) = \log \mathbb{E}[e^{\lambda (X - \mathbb{E}[X])}]$. The
+Fenchel-Legendre transform of $\psi_X$, denoted by $\psi_X^*$, plays a crucial
+role in concentration inequalities.
+
+We define the $\psi$-UCB score as:
 $$ \ucb_{j, t} = \hat{E}_{j, T_j(t-1)} + (\psi_{\hat{E}_{j, T_j(t-1)}}^*)^{-1}(3\log{t}). $$
+This formulation generalizes the classical UCB by allowing for different tail
+behaviors of the estimator distribution.
 
-\begin{theorem}[Generalized $\psi$-UCB]
-If $\hat{E}_{j, k}$ has $O(n^s)$-$\psi$ growth, the pseudo-regret satisfies:
-$$ R_n \leq \sum_{j:\Delta_j > 0} \Delta_j \left(\frac{3 \log{n}}{\psi_{\hat{E}_{j, 1}}^*(\Delta_j/2)}\right)^{1/s} + O(1), $$
-where $\Delta_j = \max_i \mu_i - \mu_j$.
+\section{Calibrate Concentration Inequality for ML-model}
+
+Here we discuss how to calibrate the concentration inequality for machine
+learning models by analyzing their learning curves. We assume that the Mean
+Squared Error (MSE) of the estimator converges as $O(n^{-s})$ for some $s > 0$.
+This assumption allows us to derive a specific form of the $\psi$-function for
+ML-based estimators.
+
+Specifically, if the estimator $\hat{E}$ satisfies the generalized $\psi$-growth
+condition, we can bound the deviation of the estimator from the true mean using
+the learning curve parameters. This leads to the specific UCB formula used in
+our algorithm.
+
+\section{Regret Analysis}
+
+We now present the main theoretical guarantee for the ML-UCB algorithm.
+
+\begin{theorem} \label{thm: main}
+Assume the estimator satisfies the generalized $\psi$-growth condition with
+ rate $s$. Then, the pseudo-regret of ML-UCB satisfies:
+$$ R_n \leq \sum_{j:\Delta_j > 0} \Delta_j \left(\frac{3\log{n}}{\psi_{\hat{E}_{j, 1}}^*(\Delta_j/2)}\right)^{1/s} + O(1). $$
 \end{theorem}
 
-This formulation allows ML-UCB to adapt to a wide range of machine learning
-models, making it a versatile tool for decision-making under uncertainty.
-
-\section{Proof of Generalized $\psi$-UCB}
-
-The proof of Theorem~\ref{thm: main} follows the structure of the classical UCB
+The proof of Theorem~\ref{thm: main} follows the structure UCB
 proof, with modifications to account for the generalized $\psi$-growth condition.
 Below, we outline the key steps:
 
@@ -240,10 +285,10 @@ $$ R_n \leq \sum_{j:\Delta_j > 0} \Delta_j \left(\frac{3\log{n}}{\psi_{\hat{E}_{
 
 \section{Experiments}
 
-\subsection{SGD on MovieLens}
+\subsection{SGD on Simulated Dataset}
 
-We apply ML-UCB to collaborative filtering on the MovieLens dataset. Using
-stochastic gradient descent (SGD), we embed users and movies into $\mathbb{R}^{10}$
+We apply ML-UCB to collaborative filtering on a simulated dataset. Using
+stochastic gradient descent (SGD), we embed users and items into $\mathbb{R}^{10}$
 and predict ratings as:
 $$ \text{Rating}(u_i, m_j) = u_i \cdot m_j. $$
 
@@ -309,7 +354,7 @@ performance.
 We introduced ML-UCB, a generalized UCB algorithm that leverages machine learning
 models for decision-making under uncertainty. By extending the concentration
 inequality framework, we proved that ML-UCB achieves faster regret convergence
-under specific conditions. Our experiments on the MovieLens dataset demonstrate
+under specific conditions. Our experiments on the simulated dataset demonstrate
 the algorithm's effectiveness and adaptability.
 
 The ML-UCB framework provides a flexible and powerful tool for integrating machine
