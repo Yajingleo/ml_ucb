@@ -11,21 +11,21 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2}Algorithm}{2}{section.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3}Concentration Inequality and UCB}{2}{section.3}\protected@file@percent }
-\citation{auer2002finite,cappe2013kullback,bartlett2014bandits}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Flowchart of the ML-UCB Algorithm}}{3}{figure.1}\protected@file@percent }
 \newlabel{fig:flowchart}{{1}{3}{Flowchart of the ML-UCB Algorithm}{figure.1}{}}
 \newlabel{eq:classical_ucb}{{2}{3}{Concentration Inequality and UCB}{equation.2}{}}
+\citation{auer2002finite,cappe2013kullback,bartlett2014bandits}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Cumulant Generating Function and $\psi $-UCB}{4}{section.4}\protected@file@percent }
 \newlabel{eq:concentration}{{7}{4}{Concentration Inequality}{equation.7}{}}
 \newlabel{eq:psi_ucb}{{8}{4}{Cumulant Generating Function and $\psi $-UCB}{equation.8}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Calibrate Concentration Inequality for ML-model}{5}{section.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Learning Curve Analysis}{5}{subsection.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Learning curve analysis: $\log (\text  {MSE})$ vs $\log (n)$, where $n$ is the number of training samples. (a) The full training trajectory shows an initial plateau (cold start) followed by power-law decay. The overall slope is $-0.27$, but this is dominated by the cold-start phase. (b) Focusing on the stable regime (last 20\% of training), we observe a cleaner linear relationship with slope $s \approx 0.97$, indicating $\text  {MSE} = O(n^{-0.97})$ convergence.}}{5}{figure.2}\protected@file@percent }
-\newlabel{fig:learning_curve}{{2}{5}{Learning curve analysis: $\log (\text {MSE})$ vs $\log (n)$, where $n$ is the number of training samples. (a) The full training trajectory shows an initial plateau (cold start) followed by power-law decay. The overall slope is $-0.27$, but this is dominated by the cold-start phase. (b) Focusing on the stable regime (last 20\% of training), we observe a cleaner linear relationship with slope $s \approx 0.97$, indicating $\text {MSE} = O(n^{-0.97})$ convergence}{figure.2}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Full training trajectory}}}{5}{figure.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Stable regime (last 20\%)}}}{5}{figure.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}From Learning Curve to Concentration Inequality}{5}{subsection.5.2}\protected@file@percent }
 \citation{bartlett2014bandits}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}From Learning Curve to Concentration Inequality}{6}{subsection.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Learning curve analysis: $\log (\text  {MSE})$ vs $\log (n)$, where $n$ is the number of training samples. (a) The full training trajectory shows an initial plateau (cold start) followed by power-law decay. The overall slope is $-0.27$, but this is dominated by the cold-start phase. (b) Focusing on the stable regime (last 20\% of training), we observe a cleaner linear relationship with slope $s \approx 0.97$, indicating $\text  {MSE} = O(n^{-0.97})$ convergence.}}{6}{figure.2}\protected@file@percent }
+\newlabel{fig:learning_curve}{{2}{6}{Learning curve analysis: $\log (\text {MSE})$ vs $\log (n)$, where $n$ is the number of training samples. (a) The full training trajectory shows an initial plateau (cold start) followed by power-law decay. The overall slope is $-0.27$, but this is dominated by the cold-start phase. (b) Focusing on the stable regime (last 20\% of training), we observe a cleaner linear relationship with slope $s \approx 0.97$, indicating $\text {MSE} = O(n^{-0.97})$ convergence}{figure.2}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Full training trajectory}}}{6}{figure.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Stable regime (last 20\%)}}}{6}{figure.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6}Regret Analysis}{6}{section.6}\protected@file@percent }
 \newlabel{thm: main}{{6.1}{6}{Regret Analysis}{thm.6.1}{}}
 \@writefile{toc}{\contentsline {paragraph}{Bounding Condition (1):}{7}{section*.1}\protected@file@percent }
