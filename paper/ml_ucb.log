@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  15 DEC 2025 00:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  15 DEC 2025 22:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -932,7 +932,7 @@ Package hyperref Info: Link coloring OFF on input line 68.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -940,7 +940,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
 
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -956,51 +956,51 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 [2]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 223.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\psi' on input line 223.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 223.
-
-
-
 [3]
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 225.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\psi' on input line 225.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 225.
+
+
+
 [4]
-<learning_curve_full.png, id=136, 509.0217pt x 414.8298pt>
+<learning_curve_full.png, id=142, 509.0217pt x 414.8298pt>
 File: learning_curve_full.png Graphic file (type png)
 <use learning_curve_full.png>
-Package pdftex.def Info: learning_curve_full.png  used on input line 301.
+Package pdftex.def Info: learning_curve_full.png  used on input line 303.
 (pdftex.def)             Requested size: 206.40038pt x 168.2077pt.
-<learning_curve_stable.png, id=138, 509.0217pt x 414.8298pt>
+<learning_curve_stable.png, id=144, 509.0217pt x 414.8298pt>
 File: learning_curve_stable.png Graphic file (type png)
 <use learning_curve_stable.png>
-Package pdftex.def Info: learning_curve_stable.png  used on input line 302.
+Package pdftex.def Info: learning_curve_stable.png  used on input line 304.
 (pdftex.def)             Requested size: 206.40038pt x 168.2077pt.
 
 
-[5 <./learning_curve_full.png> <./learning_curve_stable.png>]
+[5]
 
-[6]
+[6 <./learning_curve_full.png> <./learning_curve_stable.png>]
 
 [7]
 
 [8]
-<ml_ucb_comparison.png, id=178, 1289.5377pt x 566.5968pt>
+<ml_ucb_comparison.png, id=183, 1289.5377pt x 566.5968pt>
 File: ml_ucb_comparison.png Graphic file (type png)
 <use ml_ucb_comparison.png>
-Package pdftex.def Info: ml_ucb_comparison.png  used on input line 475.
+Package pdftex.def Info: ml_ucb_comparison.png  used on input line 477.
 (pdftex.def)             Requested size: 430.00462pt x 188.93141pt.
-<ml_ucb_convergence_rate_comparison.png, id=179, 1134.8799pt x 731.1315pt>
+<ml_ucb_convergence_rate_comparison.png, id=184, 1134.8799pt x 731.1315pt>
 File: ml_ucb_convergence_rate_comparison.png Graphic file (type png)
 <use ml_ucb_convergence_rate_comparison.png>
 Package pdftex.def Info: ml_ucb_convergence_rate_comparison.png  used on input 
-line 495.
+line 497.
 (pdftex.def)             Requested size: 430.00462pt x 277.01845pt.
 
 
@@ -1028,46 +1028,48 @@ Package rerunfilecheck Info: File `ml_ucb.out' has not changed.
 (rerunfilecheck)             Checksum: 22A878E6D4B7714ABC21F08EF7EEC109;2423.
  ) 
 Here is how much of TeX's memory you used:
- 26622 strings out of 474662
- 510196 string characters out of 5751110
- 944472 words of memory out of 5000000
- 48965 multiletter control sequences out of 15000+600000
- 578330 words of font info for 179 fonts, out of 8000000 for 9000
+ 26648 strings out of 474662
+ 510627 string characters out of 5751110
+ 945474 words of memory out of 5000000
+ 48981 multiletter control sequences out of 15000+600000
+ 580436 words of font info for 190 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  84i,9n,91p,1003b,839s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/yajingliu/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknapp
-en/ec/tcrm1000.600pk></usr/local/texlive/2025basic/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025basic/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025basic/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025bas
-ic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025
-basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2
-025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texliv
-e/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
-live/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
-texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
-al/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/l
-ocal/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
-/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
-sr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
-/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-5.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmti10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmtt10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msbm7.pfb>
-Output written on ml_ucb.pdf (14 pages, 2143825 bytes).
+en/ec/tcrm1000.600pk> </Users/yajingliu/Library/texlive/2025basic/texmf-var/fon
+ts/pk/ljfour/jknappen/ec/tcrm0600.600pk> </Users/yajingliu/Library/texlive/2025
+basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></usr/local/texlive/
+2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texl
+ive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/
+texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/loc
+al/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></us
+r/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi5.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025basic/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025basic/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025basic/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025basic/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025basic
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025b
+asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
+025basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/
+texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on ml_ucb.pdf (14 pages, 2147536 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 267 compressed objects within 3 object streams
+ 360 PDF objects out of 1000 (max. 8388607)
+ 278 compressed objects within 3 object streams
  67 named destinations out of 1000 (max. 500000)
- 43665 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 47761 words of extra memory for PDF output out of 51595 (max. 10000000)
 
