@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  15 DEC 2025 22:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  1 JAN 2026 22:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -932,7 +932,7 @@ Package hyperref Info: Link coloring OFF on input line 68.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -940,7 +940,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
 
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -959,28 +959,28 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 225.
+(hyperref)                removing `math shift' on input line 233.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\psi' on input line 225.
+(hyperref)                removing `\psi' on input line 233.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 225.
+(hyperref)                removing `math shift' on input line 233.
 
 
 
 [4]
-<learning_curve_full.png, id=142, 509.0217pt x 414.8298pt>
+<learning_curve_full.png, id=143, 509.0217pt x 414.8298pt>
 File: learning_curve_full.png Graphic file (type png)
 <use learning_curve_full.png>
-Package pdftex.def Info: learning_curve_full.png  used on input line 303.
+Package pdftex.def Info: learning_curve_full.png  used on input line 311.
 (pdftex.def)             Requested size: 206.40038pt x 168.2077pt.
-<learning_curve_stable.png, id=144, 509.0217pt x 414.8298pt>
+<learning_curve_stable.png, id=145, 509.0217pt x 414.8298pt>
 File: learning_curve_stable.png Graphic file (type png)
 <use learning_curve_stable.png>
-Package pdftex.def Info: learning_curve_stable.png  used on input line 304.
+Package pdftex.def Info: learning_curve_stable.png  used on input line 312.
 (pdftex.def)             Requested size: 206.40038pt x 168.2077pt.
 
 
@@ -991,20 +991,21 @@ Package pdftex.def Info: learning_curve_stable.png  used on input line 304.
 [7]
 
 [8]
-<ml_ucb_comparison.png, id=183, 1289.5377pt x 566.5968pt>
+<ml_ucb_comparison.png, id=185, 1289.5377pt x 566.5968pt>
 File: ml_ucb_comparison.png Graphic file (type png)
 <use ml_ucb_comparison.png>
-Package pdftex.def Info: ml_ucb_comparison.png  used on input line 477.
+Package pdftex.def Info: ml_ucb_comparison.png  used on input line 485.
 (pdftex.def)             Requested size: 430.00462pt x 188.93141pt.
-<ml_ucb_convergence_rate_comparison.png, id=184, 1134.8799pt x 731.1315pt>
-File: ml_ucb_convergence_rate_comparison.png Graphic file (type png)
-<use ml_ucb_convergence_rate_comparison.png>
-Package pdftex.def Info: ml_ucb_convergence_rate_comparison.png  used on input 
-line 497.
-(pdftex.def)             Requested size: 430.00462pt x 277.01845pt.
 
 
 [9]
+<ml_ucb_convergence_rate_comparison.png, id=192, 1134.8799pt x 731.1315pt>
+File: ml_ucb_convergence_rate_comparison.png Graphic file (type png)
+<use ml_ucb_convergence_rate_comparison.png>
+Package pdftex.def Info: ml_ucb_convergence_rate_comparison.png  used on input 
+line 505.
+(pdftex.def)             Requested size: 430.00462pt x 277.01845pt.
+
 
 [10 <./ml_ucb_comparison.png>]
 
@@ -1017,9 +1018,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-)
 
-[14] (./ml_ucb.aux)
+
+[14])
+
+[15] (./ml_ucb.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1029,10 +1032,10 @@ Package rerunfilecheck Info: File `ml_ucb.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  26648 strings out of 474662
- 510627 string characters out of 5751110
+ 510628 string characters out of 5751110
  945474 words of memory out of 5000000
- 48981 multiletter control sequences out of 15000+600000
- 580436 words of font info for 190 fonts, out of 8000000 for 9000
+ 48982 multiletter control sequences out of 15000+600000
+ 580385 words of font info for 189 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  84i,9n,91p,1003b,839s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/yajingliu/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknapp
@@ -1066,10 +1069,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025basic
 asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
 025basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/
 texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on ml_ucb.pdf (14 pages, 2147536 bytes).
+Output written on ml_ucb.pdf (15 pages, 2150611 bytes).
 PDF statistics:
- 360 PDF objects out of 1000 (max. 8388607)
- 278 compressed objects within 3 object streams
- 67 named destinations out of 1000 (max. 500000)
+ 366 PDF objects out of 1000 (max. 8388607)
+ 283 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 500000)
  47761 words of extra memory for PDF output out of 51595 (max. 10000000)
 
