@@ -82,19 +82,21 @@ Linqi Song\\
 \date{}
 \maketitle
 
-\begin{abstract}å
-We present ML-UCB, a generalized UCB algorithm applicable to arbitrary machine
-learning models. A key limitation in deploying complex ML models in bandit
-settings is the absence of rigorous concentration inequalities. We address this
-by modeling the learning curve directly: assuming the Mean Squared Error (MSE)
-converges as $O(n^{-s})$ for $s > 0$, we establish a generalized concentration
-inequality and prove that ML-UCB achieves sublinear regret. This framework
-allows for the integration of any ML model whose learning curve can be
-empirically validated, bypassing the need for model-specific theoretical
-guarantees. When $s > 1$, ML-UCB provably outperforms classical UCB. We
-demonstrate the algorithm's generality and effectiveness by applying it to
-online collaborative filtering on the simulated dataset, showing superior
-performance compared to LinUCB \cite{chu2011contextual}.
+\begin{abstract}
+We present ML-UCB, a generalized upper confidence bound algorithm that integrates
+arbitrary machine learning models into multi-armed bandit frameworks. A fundamental
+challenge in deploying sophisticated ML models for sequential decision-making is
+the lack of tractable concentration inequalities required for principled exploration.
+We overcome this limitation by directly modeling the learning curve behavior of
+the underlying estimator. Specifically, assuming the Mean Squared Error decreases
+as a power law in the number of training samples, we derive a generalized
+concentration inequality and prove that ML-UCB achieves sublinear regret. This
+framework enables the principled integration of any ML model whose learning curve
+can be empirically characterized, eliminating the need for model-specific
+theoretical analysis. We validate our approach through experiments on a collaborative
+filtering recommendation system using online matrix factorization with synthetic data
+designed to simulate a simplified two-tower model, demonstrating substantial improvements 
+over LinUCB.
 \end{abstract}
 
 \section{Introduction}
@@ -329,7 +331,7 @@ Chebyshev's inequality, the standard deviation of the estimator scales as
 $O(n^{-s/2})$. This leads to a sub-Gaussian-like tail bound with a modified
 rate.
 
-Specifically, if the estimator $\hat{E}$ satisfies the generalized $\psi$-growth
+Specifically, if the estimator $\hat{E}$ satisfies the generalized $\psi$-decay
 condition with rate $s$, we can bound the deviation of the estimator from the
 true mean using the learning curve parameters. The $\psi$-function takes the
 form:
@@ -347,13 +349,13 @@ We now present the main theoretical guarantee for the ML-UCB algorithm. The proo
 follows a similar structure to the $\psi$-UCB analysis in \cite{bartlett2014bandits}.
 
 \begin{theorem} \label{thm: main}
-Assume the estimator satisfies the generalized $\psi$-growth condition with
+Assume the estimator satisfies the generalized $\psi$-decay condition with
  rate $s$. Then, the pseudo-regret of ML-UCB satisfies:
 $$ R_n \leq \sum_{j:\Delta_j > 0} \Delta_j \left(\frac{3\log{n}}{\psi_{\hat{E}_{j, 1}}^*(\Delta_j/2)}\right)^{1/s} + O(1). $$
 \end{theorem}
 
 The proof of Theorem~\ref{thm: main} follows the structure UCB
-proof, with modifications to account for the generalized $\psi$-growth condition.
+proof, with modifications to account for the generalized $\psi$-decay condition.
 Below, we outline the key steps:
 
 \begin{proof}
@@ -404,7 +406,7 @@ $$ m_j = \left(\frac{3\log{n}}{\psi_{\hat{E}_{j, 1}}^*(\Delta_j/2)}\right)^{1/s}
 
 If $T_j(t-1) > m_j$, then:
 $$ T_j(t-1)^s > \frac{3\log{n}}{\psi_{\hat{E}_{j, 1}}^*(\Delta_j/2)}. $$
-By the $O(n^s)$-$\psi$-growth condition, we have:
+By the $O(n^s)$-$\psi$-decay condition, we have:
 $$ T_j(t-1)^s \cdot \psi_{\hat{E}_{j, 1}}^*(\Delta_j/2) \leq
 \psi_{\hat{E}_{j, T_j(t-1)}}^*(\Delta_j/2). $$
 Thus:
